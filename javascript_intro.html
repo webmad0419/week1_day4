@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Js intro</title>
+</head>
+
+<body>
+
+    <script>
+
+
+
+
+
+        // console messaging methods
+        console.log('Soy un mensaje por consola')
+        console.warn('Soy un aviso por consola')
+        console.error('Soy un error por consola')
+
+
+
+
+
+
+
+        // Numbers expressions and evaluations
+        console.log(2 + 2 * 4)		// Basic operation expression
+        console.log(2 ** 3)			// Exponentiation
+        console.log(10 % 5)			// Modulo
+        console.log(10 % 5 === 0)	// Basic comparison expression
+        var value = 10;				// Assignament
+        console.log(value += 5)		// Addition assignament
+        console.log(value -= 5)		// Subtraction assignament
+        console.log(value *= 5)		// Multiplication assignament
+        console.log(value /= 5)		// Division assignament
+        var result = (10 + 20) * .5 // Grouping operation
+
+
+
+
+
+
+
+        // break statement        
+        let pwd
+        for (var i = 0; i < 3; i++) {
+
+            pwd = prompt("Dame la pwd")
+
+            if (pwd === 'Qwerty') {
+                alert("Felicidades")
+                break
+            }
+        }
+
+        console.log(i)
+
+
+
+
+
+
+
+
+        // continue statement
+        for (let i = 100; i > 1; i--) {
+
+            if (i === 85) {
+                continue
+            }
+
+            if (i % 5 === 0) {
+                console.log(i)
+            }
+        }
+
+
+
+
+
+
+
+
+        // argumented function
+        function sayHi(name, surname) {
+            console.log(`Hola ${name} ${surname}`)
+        }
+
+        sayHi('German', 'Álvarez')
+        sayHi('Jorge', 'Whatever')
+        sayHi('Cris', 'Blanco')
+
+
+
+
+
+
+
+
+        // argumented function
+        function printHi(num) {
+            for (let i = 0; i < num; i++) {
+                console.log("Hi!!!!")
+            }
+        }
+
+        printHi(100)
+
+
+
+
+
+
+
+
+        function calculateTotalPrice(price, taxPercent) {
+
+            if (typeof price !== 'number' || typeof taxPercent !== 'number') {
+                return `You have to pass number values!`;
+            }
+
+            const theTaxPart = price * taxPercent / 100
+            return `${price + theTaxPart} €`;
+        }
+
+        const result = calculateTotalPrice(5, 7);
+
+        alert(`El resultado es ${result}`)
+
+
+
+
+
+
+
+
+        // setTimeout (nominal function)
+        setTimeout(llamar, 2000)
+
+        function llamar() {
+            alert("YAY")
+        }
+
+
+        // setTimeout (anonymous function equivalent)
+        setTimeout(function () {
+            alert("YAY")
+        }, 2000)
+
+
+
+
+
+
+
+
+        // Split method
+        const texto = "Mi casa blanca";
+        const splittedArray = texto.split(" ")
+        console.log(splittedArray)
+
+
+
+
+
+
+
+        // Array iterate with forEach()
+        const arrayNames = ["Pedro", "Jake", "Joan", "Asun"]
+
+        arrayNames.forEach(function (elm) {
+            alert(elm)
+        })
+
+
+
+
+
+
+        // Array iterate with forEach()
+        const arrayNumbers = [1, 2, 3, 4, 5]
+
+        arrayNumbers.forEach(function (elm, indice) {
+            alert(elm * 3 + ' en el índice ' + indice)
+        })
+
+
+
+
+
+
+        // Math.floor()
+        console.log(Math.floor(4.2))	// 4
+        console.log(Math.floor(4.9))	// 4
+        console.log(Math.floor(2 - .9))	// 2
+
+
+
+        // Math.random()
+        console.log(Math.random())		// [0-1]
+
+
+
+
+
+
+
+
+        // return random number between min and max value
+        function getRandomArbitrary(min, max) {
+            return Math.random() * (max - min) + min
+        }
+        console.log(getRandomArbitrary(3, 6))
+        console.log(getRandomArbitrary(0, 2))
+
+
+
+
+    </script>
+
+</body>
+
+</html>
